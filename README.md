@@ -23,6 +23,8 @@ Throughout this report, we will use the dataset from Purdue University with the 
 
 The dataset provides information on major power outages in the continental United States. It includes details such as the year, month, U.S. state, postal code, NERC (North American Electric Reliability Corporation) region, climate region, cause category, outage duration, electricity demand loss, customers affected, and various economic and demographic characteristics of the affected states.
 
+Number of Rows in the Dataset: 1534 rows.
+
 ## Question Identification
 As a result, we are able to trigger our research question: *How do demographic factors of West Coast states influence the duration and affecting range of power outages, and what mitigation strategies can be employed to reduce the risk of outages in these regions?*
 
@@ -37,16 +39,38 @@ Some relevant columns:
 - `CAUSE.CATEGORY`: The category of the cause of the outage (string).
 - `CAUSE.CATEGORY.DETAIL`: Further details about the cause of the outage (string).
 - `OUTAGE.DURATION(mins)`: The duration of the outage in minutes (float).
+- `CUSTOMERS.AFFECTED`: The number of customers affected by the outage (float).
+- `RES.PRICE(cents / kilowatt-hour)`: Residential price of electricity in cents per kilowatt-hour (float).
+- `POPULATION`: The population of the state (float).
+- `OUTAGE.START`: The date and time when the outage started (datetime).
+- `OUTAGE.RESTORATION`: The date and time when power was restored after the outage (datetime).
 
 ---
 
 # Cleaning and EDA (Exploratory Data Analysis)
 ## Data Cleaning
 
+
 ## Univariate Analysis
+*The first two plots are based on the column* `U.S._STATE`.
+
+1. The plot titled "State Power Outage Count" is a bar chart that shows the number of power outages for each state. The color of the bars represents the values of the states. By analyzing the plot, we can identify any trends or variations in power outage counts across different states.
+
+Some states have considerably higher outage counts compared to others, indicating a higher frequency of power disruptions. This could be due to various factors such as weather conditions, infrastructure vulnerabilities, or population density. The color encoding provides additional information, potentially highlighting states with particularly severe outage situations.
+
 <iframe src="assets/state_power_outage_count.html" width=800 height=600 frameBorder=0></iframe>
 
+2. The plot titled "State Frequency Map" is a choropleth map that visualizes the frequency of power outages across different states in the United States. Each state is color-coded based on the number of outages it has experienced. This graph is important as it provides a spatial representation of outage occurrences, allowing us to identify regions with higher outage frequencies and potentially uncover patterns or correlations between geographic factors and outage occurrences.
+
+This visualization helps highlight areas that require closer attention for improving resilience and mitigating power outage risks, which is a more direct visualization comparing to the above bar plot.
+
 <iframe src="assets/state_frequency_map.html" width=800 height=600 frameBorder=0></iframe>
+
+*The third plot is based on the column* `CAUSE.CATEGORY`.
+
+3. The plot titled "Count of Outages by Cause Category" is a bar chart that displays the number of outages categorized by their cause. Each bar represents a specific cause category, and its height corresponds to the count of outages in that category. This graph is important as it allows us to understand the main causes of power outages and identify the categories that contribute the most to the overall outage count.
+
+The bar chart provides insights into the distribution of power outages based on their cause categories. By analyzing the chart, we can identify the cause categories that are more prevalent in the dataset. This information is valuable for understanding the primary factors leading to power outages and can guide efforts towards implementing preventative measures or improving infrastructure resilience in specific areas.
 
 <iframe src="assets/outage_count_by_category.html" width=800 height=600 frameBorder=0></iframe>
 
