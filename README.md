@@ -74,8 +74,6 @@ The bar chart provides insights into the distribution of power outages based on 
 
 <iframe src="assets/outage_count_by_category.html" width=800 height=600 frameBorder=0></iframe>
 
-<iframe src="assets/region_pie_chart.html" width=800 height=600 frameBorder=0></iframe>
-
 ## Bivariate Analysis
 
 <iframe src="assets/resales_vs_comsales.html" width=800 height=600 frameBorder=0></iframe>
