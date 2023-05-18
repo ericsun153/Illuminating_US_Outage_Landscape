@@ -1,5 +1,7 @@
 By Eric Sun (z9sun@ucsd.edu) & Sunan Xu (sux002@ucsd.edu)
 
+---
+
 # Introduction
 ## Abstract
 Power outages in the United States can have significant impacts on individuals, communities, businesses, and critical infrastructure. They occur when the supply of electricity to an area is disrupted, resulting in a loss of power. Power outages can occur due to a variety of reasons, including natural disasters, equipment failures, human errors, and intentional acts.
@@ -35,6 +37,7 @@ Some relevant columns:
 - `CAUSE.CATEGORY`: The category of the cause of the outage (string).
 - `CAUSE.CATEGORY.DETAIL`: Further details about the cause of the outage (string).
 - `OUTAGE.DURATION(mins)`: The duration of the outage in minutes (float).
+
 ---
 
 # Cleaning and EDA (Exploratory Data Analysis)
@@ -123,3 +126,5 @@ Our p-value is aound (0.015), even though it is close, but we can not reject our
 ---
 
 # Conclusion
+
+---
