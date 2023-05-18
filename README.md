@@ -58,21 +58,21 @@ Some relevant columns:
     
     Some states have considerably higher outage counts compared to others, indicating a higher frequency of power disruptions. This could be due to various factors such as weather conditions, infrastructure vulnerabilities, or population density. The color encoding provides additional information, potentially highlighting states with particularly severe outage situations.
 
-<iframe src="assets/state_power_outage_count.html" width=800 height=600 frameBorder=0></iframe>
+    <iframe src="assets/state_power_outage_count.html" width=800 height=600 frameBorder=0></iframe>
 
 2. The plot titled "State Frequency Map" is a choropleth map that visualizes the frequency of power outages across different states in the United States. Each state is color-coded based on the number of outages it has experienced. This graph is important as it provides a spatial representation of outage occurrences, allowing us to identify regions with higher outage frequencies and potentially uncover patterns or correlations between geographic factors and outage occurrences.
 
     This visualization helps highlight areas that require closer attention for improving resilience and mitigating power outage risks, which is a more direct visualization comparing to the above bar plot.
 
-<iframe src="assets/state_frequency_map.html" width=800 height=600 frameBorder=0></iframe>
+    <iframe src="assets/state_frequency_map.html" width=800 height=600 frameBorder=0></iframe>
 
 *The third plot is based on the column* `CAUSE.CATEGORY`.
 
 3. The plot titled "Count of Outages by Cause Category" is a bar chart that displays the number of outages categorized by their cause. Each bar represents a specific cause category, and its height corresponds to the count of outages in that category. This graph is important as it allows us to understand the main causes of power outages and identify the categories that contribute the most to the overall outage count.
 
-The bar chart provides insights into the distribution of power outages based on their cause categories. By analyzing the chart, we can identify the cause categories that are more prevalent in the dataset. This information is valuable for understanding the primary factors leading to power outages and can guide efforts towards implementing preventative measures or improving infrastructure resilience in specific areas.
+    The bar chart provides insights into the distribution of power outages based on their cause categories. By analyzing the chart, we can identify the cause categories that are more prevalent in the dataset. This information is valuable for understanding the primary factors leading to power outages and can guide efforts towards implementing preventative measures or improving infrastructure resilience in specific areas.
 
-<iframe src="assets/outage_count_by_category.html" width=800 height=600 frameBorder=0></iframe>
+    <iframe src="assets/outage_count_by_category.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Bivariate Analysis
 
