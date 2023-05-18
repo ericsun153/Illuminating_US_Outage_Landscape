@@ -148,5 +148,26 @@ Our p-value is aound (0.015), even though it is close, but we can not reject our
 ---
 
 # Conclusion
+Overall, as we looked and analyzed through this dataset, we find out that the `CLIMATE.REGION` with the value of 'West' only contains the `U.S._STATE` of California and Neveda using `value_counts()`. After analyzing the relationship between columns and hypothesis testing on these two west-region states, we are able to carry out several mitigation strategies:
+
+- California:
+
+1. Enhancing infrastructure resilience: Invest in modernizing and strengthening the power grid infrastructure, including upgrading transmission and distribution systems, implementing smart grid technologies, and enhancing backup power systems.
+
+2. Implementing vegetation management programs: Establish robust vegetation management programs to prevent wildfires caused by contact between vegetation and power lines. Regularly inspect and trim trees near power lines to minimize the risk of outages caused by falling branches or wildfires.
+
+3. Diversifying energy sources: Promote the development and adoption of renewable energy sources such as solar and wind power, along with energy storage solutions. This diversification can reduce reliance on centralized power generation and improve grid stability during extreme weather events.
+
+4. Enhancing communication and coordination: Improve communication and coordination among utility companies, emergency management agencies, and local communities to ensure timely response and efficient restoration efforts during outages. This includes public awareness campaigns, community emergency preparedness initiatives, and clear communication channels.
+
+- Nevada:
+
+1. Implementing grid modernization: Upgrade and modernize the power grid infrastructure, incorporating advanced technologies for monitoring and managing the grid in real-time. This includes deploying sensors, automation systems, and smart meters to detect and respond to outages more efficiently.
+
+2. Strengthening infrastructure against extreme weather: Evaluate and reinforce infrastructure to withstand extreme weather events, such as high winds or heavy snowfall. This includes proactive maintenance of power lines, transformers, and substations to minimize the risk of failures during adverse weather conditions.
+
+3. Enhancing backup power capabilities: Encourage the installation of backup power systems, such as distributed energy resources (DERs) and microgrids, in critical facilities and vulnerable areas. These systems can provide localized power supply during outages, improving resiliency and reducing the impact on essential services.
+
+4. Promoting energy efficiency and demand response: Implement energy efficiency programs to reduce overall energy demand and peak load. Encourage participation in demand response initiatives, where consumers voluntarily reduce electricity usage during periods of high demand, thereby reducing strain on the grid and the likelihood of outages.
 
 ---
