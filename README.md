@@ -55,14 +55,14 @@ Some relevant columns:
 *The first two plots are based on the column* `U.S._STATE`.
 
 1. The plot titled "State Power Outage Count" is a bar chart that shows the number of power outages for each state. The color of the bars represents the values of the states. By analyzing the plot, we can identify any trends or variations in power outage counts across different states.
-
-Some states have considerably higher outage counts compared to others, indicating a higher frequency of power disruptions. This could be due to various factors such as weather conditions, infrastructure vulnerabilities, or population density. The color encoding provides additional information, potentially highlighting states with particularly severe outage situations.
+    
+    Some states have considerably higher outage counts compared to others, indicating a higher frequency of power disruptions. This could be due to various factors such as weather conditions, infrastructure vulnerabilities, or population density. The color encoding provides additional information, potentially highlighting states with particularly severe outage situations.
 
 <iframe src="assets/state_power_outage_count.html" width=800 height=600 frameBorder=0></iframe>
 
 2. The plot titled "State Frequency Map" is a choropleth map that visualizes the frequency of power outages across different states in the United States. Each state is color-coded based on the number of outages it has experienced. This graph is important as it provides a spatial representation of outage occurrences, allowing us to identify regions with higher outage frequencies and potentially uncover patterns or correlations between geographic factors and outage occurrences.
 
-This visualization helps highlight areas that require closer attention for improving resilience and mitigating power outage risks, which is a more direct visualization comparing to the above bar plot.
+    This visualization helps highlight areas that require closer attention for improving resilience and mitigating power outage risks, which is a more direct visualization comparing to the above bar plot.
 
 <iframe src="assets/state_frequency_map.html" width=800 height=600 frameBorder=0></iframe>
 
