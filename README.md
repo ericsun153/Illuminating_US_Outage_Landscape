@@ -76,9 +76,9 @@ Some relevant columns:
 
 ## Bivariate Analysis
 
-1. The plot titled "Residential vs Commercial Sales" is a scatter plot that compares the sales of electricity in megawatt-hours (MWh) for residential and commercial sectors. Each data point represents a state, and its position on the plot indicates the corresponding values for residential and commercial sales. The color of the data points is based on the population of the state. This graph is important as it helps visualize the relationship between residential and commercial electricity sales and identify any potential correlations or trends.
+1. The plot titled "Residential vs Commercial Sales" is a scatter plot that compares the sales of electricity in megawatt-hours (MWh) for residential and commercial sectors, and the trendline is shown as OLS regression. Each data point represents a state, and its position on the plot indicates the corresponding values for residential and commercial sales. The color of the data points is based on the population of the state. This graph is important as it helps visualize the relationship between residential and commercial electricity sales and identify any potential correlations or trends.
 
-    Since we have use `POPULATION` as the color, we can clearly find out that 
+    Since we have use `POPULATION` as the color, we can clearly find out the relation that with the 
 
     <iframe src="assets/resales_vs_comsales.html" width=800 height=600 frameBorder=0></iframe>
 
