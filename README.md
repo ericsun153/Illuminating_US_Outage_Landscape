@@ -157,7 +157,22 @@ Consequently, if a particular power outage is not caused by a hurricane, it is r
 |  4 |               nan |
 
 ## Missingness Dependency Test 1
-In this test, we try to find out if the missingness in `CUSTOMERS.AFFECTED` column is depend on the the column `CAUSE.CATEGORY` or not. The `CUSTOMERS.AFFECTED` column signifies the number of individuals impacted by each power outage event, while the `CAUSE.CATEGORY` column categorizes the specific cause behind these power outages. Prior to commencing our analysis, it is important to examine the patterns and characteristics of the missing data distribution.
+In this test, we try to find out if the missingness in `CUSTOMERS.AFFECTED` column is depend on the the column `CAUSE.CATEGORY` or not.
+
+|   CUSTOMERS.AFFECTED | CAUSE.CATEGORY     |
+|---------------------:|:-------------------|
+|                70000 | severe weather     |
+|                  nan | intentional attack |
+|                70000 | severe weather     |
+|                68200 | severe weather     |
+|               250000 | severe weather     |
+|                60000 | severe weather     |
+|                63000 | severe weather     |
+|               300000 | severe weather     |
+|                 5941 | intentional attack |
+|               400000 | severe weather     |
+
+The `CUSTOMERS.AFFECTED` column signifies the number of individuals impacted by each power outage event, while the `CAUSE.CATEGORY` column categorizes the specific cause behind these power outages. Prior to commencing our analysis, it is important to examine the patterns and characteristics of the missing data distribution.
 
 <iframe src="assets/missing_observed_graph1.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -168,7 +183,22 @@ The graphical representation of the data reveals a limited number of cause categ
 We get the p-value of 0! , and from the graph we can see that the red line and the distribution of the test result are in the two different world. This disparity strongly indicates that the missingness in the `CUSTOMERS.AFFECTED` column follows a Missing at Random (MAR) pattern. The evident distinction between the red line and the test result distribution further supports this conclusion. It becomes evident that the `CAUSE.CATEGORY` column provides valuable insights into the likelihood of missingness within the `CUSTOMERS.AFFECTED` column.
 
 ## Missingness Dependency Test 2
-In this test, we try to find out if the missingness in `CUSTOMERS.AFFECTED` column is depend on the the column `TOTAL.PRICE` or not. The `TOTAL.PRICE` column categorizes the overall electricity price for each region which endured the power outage at that time (the unit is cents / kilowatt-hour). Prior to commencing our analysis, lets take a look of data distribution again:
+In this test, we try to find out if the missingness in `CUSTOMERS.AFFECTED` column is depend on the the column `TOTAL.PRICE` or not.
+
+|   CUSTOMERS.AFFECTED |   TOTAL.PRICE(cents / kilowatt-hour) |
+|---------------------:|-------------------------------------:|
+|                70000 |                                 9.28 |
+|                  nan |                                 9.28 |
+|                70000 |                                 8.15 |
+|                68200 |                                 9.19 |
+|               250000 |                                10.43 |
+|                60000 |                                 8.28 |
+|                63000 |                                 9.12 |
+|               300000 |                                 7.36 |
+|                 5941 |                                 9.03 |
+|               400000 |                                10    |
+
+The `TOTAL.PRICE` column categorizes the overall electricity price for each region which endured the power outage at that time (the unit is cents / kilowatt-hour). Prior to commencing our analysis, lets take a look of data distribution again:
 
 <iframe src="assets/missing_ks_observed_graph.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -182,7 +212,22 @@ Based on our testing, the obtained p-value is approximately 0.2 (with slight var
 
 # Hypothesis Testing
 ## Hypothesis Testing with column *OUTAGE.DURATION*
-Introduction: Our research question encompasses two main aspects. The first part seeks to understand the influence of demographic factors on the duration of power outages in West  states. To investigate this, we focus on two key columns: `CLIMATE.REGION` and `OUTAGE.DURATION`. The `CLIMATE.REGION` column provides information on the demographic location of each power outage event, while `OUTAGE.DURATION` indicates the length of time for each outage. Our approach begins by selecting data specifically related to the `west` climate region. We then employ hypothesis testing to assess whether being located in the West region results in different outage durations compared to the entire nation. By calculating the mean duration of outages in the West region and comparing it to the mean duration of outages across the entire country, we are able to discern notable differences. Specifically, we find that outage durations in the West region are shorter than those experienced nationwide, thereby helping to establish our null and alternative hypotheses.
+Introduction: Our research question encompasses two main aspects. The first part seeks to understand the influence of demographic factors on the duration of power outages in West  states. To investigate this, we focus on two key columns: `CLIMATE.REGION` and `OUTAGE.DURATION`.
+
+|   OUTAGE.DURATION(mins) | CLIMATE.REGION     |
+|------------------------:|:-------------------|
+|                    3060 | East North Central |
+|                       1 | East North Central |
+|                    3000 | East North Central |
+|                    2550 | East North Central |
+|                    1740 | East North Central |
+|                    1860 | East North Central |
+|                    2970 | East North Central |
+|                    3960 | East North Central |
+|                     155 | East North Central |
+|                    3621 | East North Central |
+
+The `CLIMATE.REGION` column provides information on the demographic location of each power outage event, while `OUTAGE.DURATION` indicates the length of time for each outage. Our approach begins by selecting data specifically related to the `west` climate region. We then employ hypothesis testing to assess whether being located in the West region results in different outage durations compared to the entire nation. By calculating the mean duration of outages in the West region and comparing it to the mean duration of outages across the entire country, we are able to discern notable differences. Specifically, we find that outage durations in the West region are shorter than those experienced nationwide, thereby helping to establish our null and alternative hypotheses.
 
 **Null Hypothesis**: There is no siginificant difference between outage durations in the West region and those experienced nationwide.
 
@@ -197,7 +242,22 @@ Our P value is aound (0.0004), we can reject the null hypothesis and conclude th
 
 ## Hypothesis Testing with column *CUSTOMER.AFFECTED*
 
-Introducton: The second part of our research question is to understand the influence of demographic factors on the population affected on each outage. In another words, we are interested at figure out if each outage happened in the west affect more people compared with the the area of the whole country, since it seems like there are lot of people densed aread in the west. Similar with the previous one, our approach begins by selecting data specifically related to the `west` climate region. By calculating the number of people affected in the West region and comparing it to the mnumber across the entire country, we are able to discern notable differences.
+Introducton: The second part of our research question is to understand the influence of demographic factors on the population affected on each outage. In another words, we are interested at figure out if each outage happened in the west affect more people compared with the the area of the whole country, since it seems like there are lot of people densed aread in the west.
+
+| CLIMATE.REGION     |   CUSTOMERS.AFFECTED |
+|:-------------------|---------------------:|
+| East North Central |                70000 |
+| East North Central |                  nan |
+| East North Central |                70000 |
+| East North Central |                68200 |
+| East North Central |               250000 |
+| East North Central |                60000 |
+| East North Central |                63000 |
+| East North Central |               300000 |
+| East North Central |                 5941 |
+| East North Central |               400000 |
+
+Similar with the previous one, our approach begins by selecting data specifically related to the `west` climate region. By calculating the number of people affected in the West region and comparing it to the mnumber across the entire country, we are able to discern notable differences.
 
 **Null Hypothesis**: The number of people affected by power outages on the West region has no siginificant difference with all regions of the country.
 
