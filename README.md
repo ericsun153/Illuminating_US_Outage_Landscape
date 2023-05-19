@@ -74,11 +74,7 @@ After reading the csv file as a panda dataframe, all the columns are named `Unna
 
 In the data filtering process, we also realize that there are two of each columns related to the start time and restoration time of the power outage in each region. Therefore, we combine `OUTAGE.START.DATE` and `OUTAGE.START.TIME` into a new `pd.Timestamp` column called `OUTAGE.START`, and combine `OUTAGE.RESTORATION.DATE` and `OUTAGE.RESTORATION.TIME` into a new `pd.Timestamp` column called `OUTAGE.RESTORATION`, and here are the first few lines of the result columns
 
-<center>
-
 ![](assets/1684479576397.jpg)
-
-</center>
 
 After looking at all the column information by use `.info()`, we found that lots of price, population, or percentage columns that should be in float were all in string data types, and removed the `OBS` column since the index is the same. Moreover, since all the column names are quite easy to read and understand, so we didn't change the column names eventually and here is the first several lines of our cleaned dataset:
 
