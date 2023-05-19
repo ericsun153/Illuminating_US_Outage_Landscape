@@ -93,6 +93,27 @@ Some relevant columns:
     <iframe src="assets/correlation_heatmap.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Interesting Aggregates
+- The aggregation performed using the `groupby` function calculates the total number of customers affected by power outages each year and presents the results in a pivot table. This table provides a clear overview of the customer impact over time, allowing us to identify trends and patterns in terms of the scale of power outages. The importance of this aggregation lies in understanding the magnitude of the impact on customers and can help prioritize efforts to improve the reliability and resilience of the power grid.
+
+|   YEAR |   CUSTOMERS.AFFECTED |
+|-------:|---------------------:|
+|   2000 |          4.27058e+06 |
+|   2001 |          1.43141e+06 |
+|   2002 |          6.38259e+06 |
+|   2003 |          1.24631e+07 |
+|   2004 |          1.35926e+07 |
+|   2005 |          1.35521e+07 |
+|   2006 |          1.01521e+07 |
+|   2007 |          5.97343e+06 |
+|   2008 |          1.99649e+07 |
+|   2009 |          6.81348e+06 |
+|   2010 |          1.01081e+07 |
+|   2011 |          1.64387e+07 |
+|   2012 |          1.2704e+07  |
+|   2013 |          7.0184e+06  |
+|   2014 |          8.0222e+06  |
+|   2015 |          5.62921e+06 |
+|   2016 |          1.99391e+06 |
 
 ---
 
