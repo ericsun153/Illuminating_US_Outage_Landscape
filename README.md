@@ -49,6 +49,8 @@ Some relevant columns:
 
 # Cleaning and EDA (Exploratory Data Analysis)
 ## Data Cleaning
+Since all the column names are quite easy to read and understand, so we didn't change the column names eventually and here is the first several lines of our cleaned dataset:
+
 
 
 ## Univariate Analysis
@@ -99,8 +101,6 @@ Some relevant columns:
 total_customers_affected_per_year = pd.DataFrame(df.groupby('YEAR')['CUSTOMERS.AFFECTED'].sum())
 ```
 
-<div align="center">
-
 |   YEAR |   CUSTOMERS.AFFECTED |
 |-------:|---------------------:|
 |   2000 |          4.27058e+06 |
@@ -120,8 +120,6 @@ total_customers_affected_per_year = pd.DataFrame(df.groupby('YEAR')['CUSTOMERS.A
 |   2014 |          8.0222e+06  |
 |   2015 |          5.62921e+06 |
 |   2016 |          1.99391e+06 |
-
-</div>
 
 - This pivot table `pivot_table_outage_duration` aggregates the average outage duration (in minutes) for each combination of U.S. state and cause category. This table provides insights into the average duration of outages caused by different factors across different states. The importance of this pivot table lies in identifying the causes of longer or more significant outages, which can help prioritize mitigation efforts and improve the reliability of the power grid in specific regions or for specific causes. (The following is the head)
 
