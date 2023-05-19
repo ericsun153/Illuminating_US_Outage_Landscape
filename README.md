@@ -99,7 +99,7 @@ Some relevant columns:
 total_customers_affected_per_year = pd.DataFrame(df.groupby('YEAR')['CUSTOMERS.AFFECTED'].sum())
 ```
 
-<center>
+<div align="center">
 
 |   YEAR |   CUSTOMERS.AFFECTED |
 |-------:|---------------------:|
@@ -121,15 +121,13 @@ total_customers_affected_per_year = pd.DataFrame(df.groupby('YEAR')['CUSTOMERS.A
 |   2015 |          5.62921e+06 |
 |   2016 |          1.99391e+06 |
 
-</center>
+</div>
 
 - This pivot table `pivot_table_outage_duration` aggregates the average outage duration (in minutes) for each combination of U.S. state and cause category. This table provides insights into the average duration of outages caused by different factors across different states. The importance of this pivot table lies in identifying the causes of longer or more significant outages, which can help prioritize mitigation efforts and improve the reliability of the power grid in specific regions or for specific causes. (The following is the head)
 
 ```py
 pivot_table_outage_duration = df.pivot_table(index='U.S._STATE', columns='CAUSE.CATEGORY', values='OUTAGE.DURATION(mins)', aggfunc='mean', fill_value=0)
 ```
-
-<center>
 
 | U.S._STATE   |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
 |:-------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
@@ -139,16 +137,12 @@ pivot_table_outage_duration = df.pivot_table(index='U.S._STATE', columns='CAUSE.
 | California   |              524.81 |                  6154.6 |              946.458 |     214.857 |         2028.11 |          2928.37 |                         363.667 |
 | Colorado     |                0    |                     0   |              117     |       2     |            0    |          2727.25 |                         279.75  |
 
-</center>
-
 ---
 
 # Assessment of Missingness
 ## NMAR
 The concept of Not Missing At Random (NMAR) implies that the probability of a value being missing is dependent on the actual missing value itself. In the context of this dataset, the column in question records the names of hurricanes responsible for specific power outages. However, it is important to note that not all power outages can be attributed to hurricanes. Some outages may result from facility maintenance or other natural disasters.
 Consequently, if a particular power outage is not caused by a hurricane, it is reasonable for the corresponding cell in the hurricane column to be missing. Incorporating an additional column, such as one that records the amount of rainfall during the corresponding time period, could provide further context. For instance, if the rainfall amount is significantly higher than usual, it is more likely that a hurricane is responsible for the power outage, and thus, the hurricane name column would be shown as `NaN`. Here is the `head` of `HURRICANE.NAMES` column in the dataset:
-
-<center>
 
 |    |   HURRICANE.NAMES |
 |---:|------------------:|
@@ -157,8 +151,6 @@ Consequently, if a particular power outage is not caused by a hurricane, it is r
 |  2 |               nan |
 |  3 |               nan |
 |  4 |               nan |
-
-</center>
 
 ## Missingness Dependency Test 1
 In this test, we try to find out if the missingness in `CUSTOMERS.AFFECTED` column is depend on the the column `CAUSE.CATEGORY` or not. The `CUSTOMERS.AFFECTED` column signifies the number of individuals impacted by each power outage event, while the `CAUSE.CATEGORY` column categorizes the specific cause behind these power outages. Prior to commencing our analysis, it is important to examine the patterns and characteristics of the missing data distribution.
