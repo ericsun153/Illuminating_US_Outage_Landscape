@@ -78,13 +78,19 @@ Some relevant columns:
 
 1. The plot titled "Residential vs Commercial Sales" is a scatter plot that compares the sales of electricity in megawatt-hours (MWh) for residential and commercial sectors, and the trendline is shown as OLS regression. Each data point represents a state, and its position on the plot indicates the corresponding values for residential and commercial sales. The color of the data points is based on the population of the state. This graph is important as it helps visualize the relationship between residential and commercial electricity sales and identify any potential correlations or trends.
 
-    Since we have use `POPULATION` as the color, we can clearly find out the relation that with the 
+    Since we have use `POPULATION` as the color, we can clearly find out the relation that with the increasing population among all regions, the corresponding general sales of electricity will also increment, which again verifies a daily circumstance that we realized every day.
 
     <iframe src="assets/resales_vs_comsales.html" width=800 height=600 frameBorder=0></iframe>
 
-<iframe src="assets/correlation_heatmap.html" width=800 height=600 frameBorder=0></iframe>
+2. The plot titled "Outage Duration by Climate Category" is a box plot that displays the distribution of outage durations in minutes across different climate categories. Each box represents a climate category, and the vertical axis represents the duration of outages in minutes. This graph is important as it allows us to compare the outage durations between different climate categories and identify any variations or trends.
 
-<iframe src="assets/duration_vs_category.html" width=800 height=600 frameBorder=0></iframe>
+    <iframe src="assets/duration_vs_category.html" width=800 height=600 frameBorder=0></iframe>
+
+3. The plot titled "Correlation Heatmap" visualizes the correlation matrix of the dataset using a color scale. Each cell represents the correlation coefficient between two variables, with cooler colors indicating positive correlations and warmer colors indicating negative correlations. This plot is important as it helps identify relationships and dependencies between different variables in the dataset.
+
+    By analyzing the heatmap, we can gain insights into which variables are strongly correlated or inversely correlated, which can guide further analysis and exploration of causal relationships. It can also help identify potential factors that contribute to power outages and inform decision-making for prevention and mitigation strategies.
+
+    <iframe src="assets/correlation_heatmap.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Interesting Aggregates
 
